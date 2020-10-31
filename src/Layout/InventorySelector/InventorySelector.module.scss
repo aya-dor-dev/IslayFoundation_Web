@@ -1,0 +1,35 @@
+.Container {
+  height: 100%;
+  width: 100%;
+}
+
+.Logo {
+  height: 80%;
+  width: 100%;
+  display: block;
+  padding: 16px;
+  padding-bottom: 0px;
+
+  img {
+    display: block;
+    width: auto;
+    height: 80%;
+    margin: auto;
+  }
+}
+
+.InventorySelector {
+  height: 20%;
+  width: 80%;
+  margin-top: auto;
+  margin-left: 10%;
+  outline: none;
+  background: transparent;
+  border-color: transparent;
+  border-radius: 4px;
+  color: white;
+  padding: auto 16px;
+  font: inherit;
+  font-weight: bold;
+}
+

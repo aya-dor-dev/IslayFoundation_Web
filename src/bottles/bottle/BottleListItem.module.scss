@@ -1,0 +1,90 @@
+@import "../../palette";
+@import "../../resolutions";
+
+.Bottle {
+  position: relative;
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 3rem 3rem 3rem 3rem;
+  grid-template-areas:
+    "image name name name"
+    "image notes notes notes"
+    "image purchased_by purchase_date purchase_price"
+    "image auction lot sold_for";
+
+  @include portrait-phone() {
+  grid-gap: 4px;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: minmax(3rem, 6rem) 3rem 3rem 3rem 3rem, 3rem;
+  grid-template-areas:
+    "image name name name "
+    "image notes notes notes"
+    "image purchase_price purchase_price purchase_price"
+    "image auction auction auction"
+    "purchased_by purchased_by lot lot"
+    "purchase_date purchase_date sold_for sold_for"
+  }
+}
+
+.Label {
+  position: absolute;
+  right: -32px;
+  top: 0;
+  width: 128px;
+  background: $red;
+  padding: 4px 16px;
+  color: white;
+  transform: rotateZ(45deg);
+  text-align: center;
+}
+
+.Image {
+  height: 90%;
+  margin: 5% auto;
+  grid-area: image;
+}
+
+.Name {
+  font-size: 1.2em;
+  grid-area: name;
+  color: $primary-color;
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  margin-right: 96px;
+  height: 100%;
+}
+
+.PurchasedBy {
+  grid-area: purchased_by;
+}
+
+.PurchaseDate {
+  grid-area: purchase_date;
+}
+
+.PurchasePrice {
+  grid-area: purchase_price;
+}
+
+.Auction {
+  grid-area: auction;
+}
+
+.Lot {
+  grid-area: lot;
+}
+
+.SoldFor {
+  grid-area: sold_for;
+}
+
+.Menu {
+  position: absolute;
+  font-size: 1.2rem;
+  top: 16px;
+  right: 16px;
+  color: #9e9e9e;
+  cursor: pointer;
+}

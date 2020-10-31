@@ -1,0 +1,42 @@
+@import "./resolutions";
+
+.Page {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+
+  @include portrait-phone() {
+    padding: 0.2rem;
+  }
+}
+
+.PageContent {
+  width: 100%;
+  height: 100%;
+
+  @include large-screen() {
+    width: calc(1200px - 17rem);
+    margin: auto;
+  }
+}
+
+.Info {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: row;
+}
+
+.Info > div {
+  margin-right: 16px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.Subtext {
+  font: inherit;
+  color: #aaa;
+  font-size: 0.8rem;
+  display: block;
+}

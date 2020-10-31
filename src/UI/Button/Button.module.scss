@@ -1,0 +1,57 @@
+@import "../../palette";
+
+.Button {
+  background-color: transparent;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border-radius: 12px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  height: 3rem;
+  
+  cursor: pointer;
+  transition: 0.1s ease-out;
+
+  &:hover {
+    transform: box-shadow;
+    box-shadow: 4px 4px 4px transparentize($primary-color, 0.8);
+  }
+
+  h5{
+    margin: 0 auto;
+    page-break-after: 0;
+  }
+}
+
+.Neutral {
+  border: 1px solid #ccc;
+  background-color: white;
+  color: $primary-color;
+}
+
+.Positive {
+  box-shadow: 2px 2px 2px transparentize($primary-color, 0.8);
+  background-color: $accent;
+  color: white;
+}
+
+.CTA {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, lighten($accent, 5%) 0%, darken($accent, 5%) 100%);
+}
+
+.Negative {
+  background-color: $red;
+  color: white;
+}
+
+.Disabled {
+  opacity: 0.5;
+}
+
+.FillWidth {
+  width: 100%;
+  text-align: center;
+}

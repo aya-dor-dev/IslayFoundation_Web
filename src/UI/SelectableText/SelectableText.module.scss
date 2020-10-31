@@ -1,0 +1,31 @@
+@import "../../palette";
+
+@mixin focused {
+  background: $primary-color;
+  border-color: $primary-color;
+  color: white;
+  font-weight: bold;
+}
+
+.SelectableText {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  &:hover,
+  &:active {
+    @include focused;
+  }
+}
+
+.Selected {
+  @include focused;
+}
+
+.Disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+

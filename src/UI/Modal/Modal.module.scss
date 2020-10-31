@@ -1,0 +1,115 @@
+@import "../../palette";
+@import "../../resolutions";
+
+.Container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 150;
+  left: 0;
+  top: 0;
+}
+
+.Modal {
+  position: absolute;
+  top: calc(50% - 25rem);
+  left: calc(50% - 25rem);
+  z-index: 200;
+  border: 1px solid $primary-color;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px $primary-color;
+  background-color: white;
+  text-align: center;
+  box-sizing: border-box;
+  margin: auto;
+  width: 50rem;
+  transition: all 300ms ease-out;
+  overflow: hidden;
+
+  // @include phone() {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   border-radius: 0;
+  // }
+}
+
+.Header {
+  height: 4rem;
+  background: $primary-color;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    color: white;
+    font-family: "Open Sans Condensed", sans-serif;
+  }
+}
+
+.Content {
+  padding: 2rem;
+}
+
+.CloseButton {
+  font-size: 2rem;
+  color: white;
+  display: inline;
+  cursor: pointer;
+}
+
+.slide-in-enter {
+}
+
+.slide-in-enter-active {
+  animation: OpenModal 0.3s ease-out forwards;
+}
+
+.slide-exit-enter {
+}
+
+.slide-in-exit-active {
+  animation: CloseModal 0.3s ease-out forwards;
+}
+
+@keyframes CloseModal {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: translateY(60%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes OpenModal {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,65 @@
+@import "../../resolutions";
+@import "../../palette";
+
+.Title {
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.AddAuction {
+  width: 100%;
+  margin: auto;
+  @include portrait-phone() {
+    width: 100%;
+  }
+}
+
+.Form {
+  width: 400px;
+}
+
+.FormFields {
+  margin: auto;
+  display: grid;
+  grid-gap: 4%;
+  grid-auto-columns: auto;
+  grid-template-columns: 48% 48%;
+  grid-template-rows: 80px 80px 144px auto 3rem 3rem;
+  grid-template-areas:
+    "name name"
+    "auctioneer auctioneer"
+    "start_date end_date"
+    "space space"
+    "save save";
+
+  @include portrait-phone() {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.Save {
+  grid-area: save;
+  width: 100%;
+  height: 3rem;
+  text-align: center;
+
+  // @include phone() {
+  //   align-self: center;
+  //   margin: 32px auto;
+  // }
+}
+
+.StartDate {
+  width: 100%;
+}
+
+.EndDate {
+  width: 100%;
+}
+
+.Spinner {
+  height: 2rem;
+  width: 2rem;
+  margin-bottom: 2rem;
+}

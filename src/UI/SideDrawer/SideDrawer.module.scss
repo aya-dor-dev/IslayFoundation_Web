@@ -1,0 +1,80 @@
+@import "../../palette";
+@import "../../resolutions";
+
+.Container {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  position: fixed;
+  z-index: 150;
+  left: 0;
+  top: 0;
+}
+
+.SideDrawer {
+  background-color: white;
+  height: 100%;
+  min-height: 100%;
+  z-index: 150;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: all 0.3s ease-out;
+  padding:32px;
+
+  overflow: scroll;
+  @include portrait-phone() {
+    padding: 32px 8px;
+    width: 100%;
+  }
+}
+
+.Content {
+  padding:16px;
+  height: calc(100% - 1.6rem);
+
+  @include portrait-phone() {
+    padding: 16px 0;
+  }
+}
+
+.CloseButton {
+  font-size: 1.5rem;
+  color: black;
+  display: inline;
+  cursor: pointer;
+}
+
+.slide-in-enter {
+}
+
+.slide-in-enter-active {
+  animation: OpenDrawer 0.3s ease-out forwards;
+}
+
+.slide-exit-enter {
+}
+
+.slide-in-exit-active {
+  animation: CloseDrawer 0.3s ease-out forwards;
+}
+
+@keyframes CloseDrawer {
+  0% {
+    transform: translatex(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes OpenDrawer {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

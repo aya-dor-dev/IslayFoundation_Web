@@ -1,0 +1,37 @@
+$menu-width: 15rem;
+
+@mixin horizontal-phone() {
+  @media (max-width: 50rem) and (max-height: 30rem) {
+    @content;
+  }
+}
+
+@mixin portrait-phone() {
+  @media (max-height: 900px) and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin landscape-phone() {
+  @media (max-height: 400px) and (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin medium-screen-portrait() {
+  @media (max-height: 1024px) and (max-width: 768) {
+    @content;
+  }
+}
+
+@mixin medium-screen() {
+  @media (max-height: 768px) and (max-width: 1200) {
+    @content;
+  }
+}
+
+@mixin large-screen() {
+  @media (min-width: 1201px) {
+    @content;
+  }
+}

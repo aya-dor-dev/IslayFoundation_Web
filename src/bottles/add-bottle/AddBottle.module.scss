@@ -1,0 +1,77 @@
+@import "../../resolutions";
+@import "../../palette";
+
+.Title {
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.AddBottle {
+  width: 100%;
+  margin: auto;
+  @include portrait-phone() {
+    width: 100%;
+  }
+}
+
+.FormFields {
+  margin: auto;
+  display: grid;
+  grid-gap: 2%;
+  grid-auto-columns: auto;
+  grid-template-columns: 23% 23% 23% 23%;
+  grid-template-rows: 80px 80px 144px auto 3rem 3rem;
+  grid-template-areas:
+    "name name name name"
+    "price price date date"
+    "image_url image_url image_url image"
+    "owner owner owner owner"
+    "space space space space"
+    "save save save save";
+
+  @include portrait-phone() {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.Image {
+  height: 100%;
+  grid-area: image;
+  width: auto;
+  margin: auto;
+  background: url(http://goo.gl/vyAs27) no-repeat scroll 0 0;
+
+  @include portrait-phone() {
+    width: 30%;
+  }
+}
+
+.Save {
+  grid-area: save;
+  width: 100%;
+  height: 3rem;
+  text-align: center;
+
+  // @include phone() {
+  //   align-self: center;
+  //   margin: 32px auto;
+  // }
+}
+
+.PurchaseDate {
+  width: 100%;
+}
+
+.Owners {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Spinner {
+  height: 2rem;
+  width: 2rem;
+  margin-bottom: 2rem;
+}

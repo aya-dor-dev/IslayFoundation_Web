@@ -1,0 +1,30 @@
+@import "../../palette";
+
+@mixin Focused {
+}
+
+.SelectBottles {
+  width: 440px;
+  height: 100%;
+
+  .List {
+    width: 100%;
+    height: calc(100% - 4rem);
+
+    > * {
+      margin: 8px 0;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      cursor: pointer;
+
+      &:hover {
+        background: #f9f9f9;
+      }
+    }
+
+    .Selected {
+      background: #f9f9f9;
+      border: 1px solid $accent;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import '../../palette';
+
+.InputField {
+  width: 100%;
+  display: inline-block;
+
+  h5 {
+    color: $primary-color;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    margin: 0.5rem 0;
+  }
+
+  input {
+    width: 100%;
+  }
+  
+  p {
+    font-size:0.8rem;
+    color: $red;
+    margin: 0.2rem;
+    text-align: left;
+  }
+}

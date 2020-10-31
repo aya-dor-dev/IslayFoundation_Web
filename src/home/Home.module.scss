@@ -1,0 +1,14 @@
+@import '../palette';
+
+.Header {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  background-color: $primary-color;
+}
+
+.Title {
+  position: relative;
+  top: 50%;
+  color: white;
+}
